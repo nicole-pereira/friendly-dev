@@ -13,6 +13,7 @@ export type Project = {
 export type PostMeta = {
   id: string;
   slug: string;
+  body: string;
   title: string;
   excerpt: string;
   date: string;
@@ -21,8 +22,7 @@ export type PostMeta = {
 
 export type BlogPostDetailsPageProps = {
   loaderData: {
-    postMeta: PostMeta;
-    markdown: string;
+    post: PostMeta;
   };
 };
 
