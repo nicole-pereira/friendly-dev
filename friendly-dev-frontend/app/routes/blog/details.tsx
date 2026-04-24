@@ -10,7 +10,9 @@ import { Link } from "react-router";
 export async function loader({ request, params }: Route.LoaderArgs) {
   const { slug } = params;
 
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/posts?filters[slug][&eq]=${slug}&populate=image`);
+  const res = await fetch(
+  `${import.meta.env.VITE_API_URL}/posts?filters[slug][$eq]=${slug}&populate=image`
+);
 
   if (!res.ok) throw new Error("Failed to fetch data");
   const json: StrapiResponse<StrapiPost> = await res.json();
