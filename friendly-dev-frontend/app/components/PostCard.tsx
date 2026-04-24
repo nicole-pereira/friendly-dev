@@ -1,7 +1,7 @@
-import type { PostMeta } from "~/types";
+import type { Post } from "~/types";
 import { Link } from "react-router";
 
-const PostCard = ({ post }: { post: PostMeta }) => {
+const PostCard = ({ post }: { post: Post }) => {
   return (
     <article className="bg-orange-200 p-6 rounded-lg shadow mb-4">
       <h3 className="text-2xl font-semibold text-orange-400">{post.title}</h3>

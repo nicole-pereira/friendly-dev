@@ -10,7 +10,7 @@ export type Project = {
   featured: boolean;
 };
 
-export type PostMeta = {
+export type Post = {
   id: string;
   slug: string;
   body: string;
@@ -22,7 +22,7 @@ export type PostMeta = {
 
 export type BlogPostDetailsPageProps = {
   loaderData: {
-    post: PostMeta;
+    post: Post;
   };
 };
 
@@ -32,7 +32,7 @@ export type PostFilterProps = {
 };
 
 export type LatestPostsProps = {
-  posts: PostMeta[];
+  posts: Post[];
   limit: number;
 };
 
