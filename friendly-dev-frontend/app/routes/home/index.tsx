@@ -37,7 +37,7 @@ export async function loader({
     title: item.title,
     description: item.description,
     image: item.image?.url
-      ? `${import.meta.env.VITE_STRAPI_URL}${item.image.url}`
+      ? `${item.image.url}`
       : "/images/no-image.png",
     url: item.url,
     date: item.date,
@@ -51,7 +51,7 @@ export async function loader({
     slug: item.slug,
     excerpt: item.excerpt,
     image: item.image?.url
-      ? `${import.meta.env.VITE_STRAPI_URL}${item.image.url}`
+      ? `${item.image.url}`
       : "/images/no-image.png",
     date: item.date,
     body: item.body,
